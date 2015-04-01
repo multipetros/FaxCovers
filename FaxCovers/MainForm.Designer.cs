@@ -1,19 +1,12 @@
-﻿/*
- * Created by SharpDevelop.
- * User: KPE3
- * Date: 14/8/2012
- * Time: 9:43 πμ
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-namespace FaxCovers
-{
-	partial class MainForm
-	{
+﻿namespace FaxCovers{
+	
+	partial class MainForm{
+		
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
+
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -62,7 +55,10 @@ namespace FaxCovers
 			this.label12 = new System.Windows.Forms.Label();
 			this.menuStripMain = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.loadContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.saveContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItemSparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,9 +69,15 @@ namespace FaxCovers
 			this.buttonSave = new System.Windows.Forms.Button();
 			this.webBrowser = new System.Windows.Forms.WebBrowser();
 			this.label13 = new System.Windows.Forms.Label();
+			this.pictureBoxLoadContact = new System.Windows.Forms.PictureBox();
+			this.pictureBoxSaveContact = new System.Windows.Forms.PictureBox();
+			this.pictureBoxClear = new System.Windows.Forms.PictureBox();
 			this.menuStripMain.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxRight)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxLeft)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadContact)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaveContact)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClear)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// dateTimePicker
@@ -83,21 +85,21 @@ namespace FaxCovers
 			this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
 			this.dateTimePicker.Location = new System.Drawing.Point(101, 31);
 			this.dateTimePicker.Name = "dateTimePicker";
-			this.dateTimePicker.Size = new System.Drawing.Size(117, 20);
+			this.dateTimePicker.Size = new System.Drawing.Size(128, 20);
 			this.dateTimePicker.TabIndex = 30;
 			// 
 			// textBoxPages
 			// 
 			this.textBoxPages.Location = new System.Drawing.Point(101, 57);
 			this.textBoxPages.Name = "textBoxPages";
-			this.textBoxPages.Size = new System.Drawing.Size(117, 20);
+			this.textBoxPages.Size = new System.Drawing.Size(128, 20);
 			this.textBoxPages.TabIndex = 0;
 			// 
 			// textBoxToFax
 			// 
 			this.textBoxToFax.Location = new System.Drawing.Point(101, 109);
 			this.textBoxToFax.Name = "textBoxToFax";
-			this.textBoxToFax.Size = new System.Drawing.Size(117, 20);
+			this.textBoxToFax.Size = new System.Drawing.Size(128, 20);
 			this.textBoxToFax.TabIndex = 2;
 			// 
 			// label1
@@ -128,7 +130,7 @@ namespace FaxCovers
 			// 
 			this.label4.Location = new System.Drawing.Point(12, 86);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(83, 23);
+			this.label4.Size = new System.Drawing.Size(42, 23);
 			this.label4.TabIndex = 7;
 			this.label4.Text = "Προς";
 			// 
@@ -136,7 +138,7 @@ namespace FaxCovers
 			// 
 			this.textBoxTo.Location = new System.Drawing.Point(101, 83);
 			this.textBoxTo.Name = "textBoxTo";
-			this.textBoxTo.Size = new System.Drawing.Size(117, 20);
+			this.textBoxTo.Size = new System.Drawing.Size(128, 20);
 			this.textBoxTo.TabIndex = 1;
 			// 
 			// label5
@@ -151,7 +153,7 @@ namespace FaxCovers
 			// 
 			this.textBoxToAdr.Location = new System.Drawing.Point(101, 135);
 			this.textBoxToAdr.Name = "textBoxToAdr";
-			this.textBoxToAdr.Size = new System.Drawing.Size(117, 20);
+			this.textBoxToAdr.Size = new System.Drawing.Size(128, 20);
 			this.textBoxToAdr.TabIndex = 3;
 			// 
 			// textBoxFromFax
@@ -235,21 +237,21 @@ namespace FaxCovers
 			this.textBoxMessage.Multiline = true;
 			this.textBoxMessage.Name = "textBoxMessage";
 			this.textBoxMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.textBoxMessage.Size = new System.Drawing.Size(206, 99);
+			this.textBoxMessage.Size = new System.Drawing.Size(217, 99);
 			this.textBoxMessage.TabIndex = 4;
 			// 
 			// label11
 			// 
 			this.label11.Location = new System.Drawing.Point(12, 171);
 			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(206, 18);
+			this.label11.Size = new System.Drawing.Size(184, 18);
 			this.label11.TabIndex = 21;
 			this.label11.Text = "Συνοδευτικό κείμενο";
 			// 
 			// label12
 			// 
 			this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label12.Location = new System.Drawing.Point(237, 34);
+			this.label12.Location = new System.Drawing.Point(242, 34);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(2, 280);
 			this.label12.TabIndex = 22;
@@ -261,30 +263,59 @@ namespace FaxCovers
 									this.helpToolStripMenuItem});
 			this.menuStripMain.Location = new System.Drawing.Point(0, 0);
 			this.menuStripMain.Name = "menuStripMain";
-			this.menuStripMain.Size = new System.Drawing.Size(254, 24);
+			this.menuStripMain.Size = new System.Drawing.Size(483, 24);
 			this.menuStripMain.TabIndex = 23;
 			this.menuStripMain.Text = "menuStrip";
 			// 
 			// fileToolStripMenuItem
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+									this.loadContactToolStripMenuItem,
+									this.saveContactToolStripMenuItem,
 									this.printToolStripMenuItem,
+									this.toolStripMenuItemSparator1,
 									this.exitToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
 			this.fileToolStripMenuItem.Text = "&Αρχείο";
+			// 
+			// loadContactToolStripMenuItem
+			// 
+			this.loadContactToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("loadContactToolStripMenuItem.Image")));
+			this.loadContactToolStripMenuItem.Name = "loadContactToolStripMenuItem";
+			this.loadContactToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+			this.loadContactToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+			this.loadContactToolStripMenuItem.Text = "&Φόρτωση επαφής";
+			this.loadContactToolStripMenuItem.Click += new System.EventHandler(this.LoadContactToolStripMenuItemClick);
+			// 
+			// saveContactToolStripMenuItem
+			// 
+			this.saveContactToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveContactToolStripMenuItem.Image")));
+			this.saveContactToolStripMenuItem.Name = "saveContactToolStripMenuItem";
+			this.saveContactToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+			this.saveContactToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+			this.saveContactToolStripMenuItem.Text = "Απο&θήκευση επαφής";
+			this.saveContactToolStripMenuItem.Click += new System.EventHandler(this.SaveContactToolStripMenuItemClick);
 			// 
 			// printToolStripMenuItem
 			// 
+			this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
 			this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-			this.printToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+			this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+			this.printToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
 			this.printToolStripMenuItem.Text = "&Εκτύπωση";
 			this.printToolStripMenuItem.Click += new System.EventHandler(this.PrintToolStripMenuItemClick);
 			// 
+			// toolStripMenuItemSparator1
+			// 
+			this.toolStripMenuItemSparator1.Name = "toolStripMenuItemSparator1";
+			this.toolStripMenuItemSparator1.Size = new System.Drawing.Size(225, 6);
+			// 
 			// exitToolStripMenuItem
 			// 
+			this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
 			this.exitToolStripMenuItem.Text = "Έ&ξοδος";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
 			// 
@@ -293,13 +324,15 @@ namespace FaxCovers
 			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.aboutToolStripMenuItem});
 			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-			this.helpToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+			this.helpToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
 			this.helpToolStripMenuItem.Text = "&Βοήθεια";
 			// 
 			// aboutToolStripMenuItem
 			// 
+			this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+			this.aboutToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
 			this.aboutToolStripMenuItem.Text = "&Πληροφορίες";
 			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItemClick);
 			// 
@@ -307,7 +340,7 @@ namespace FaxCovers
 			// 
 			this.buttonPrint.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrint.Image")));
 			this.buttonPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.buttonPrint.Location = new System.Drawing.Point(46, 299);
+			this.buttonPrint.Location = new System.Drawing.Point(51, 300);
 			this.buttonPrint.Name = "buttonPrint";
 			this.buttonPrint.Size = new System.Drawing.Size(134, 34);
 			this.buttonPrint.TabIndex = 5;
@@ -317,8 +350,9 @@ namespace FaxCovers
 			// 
 			// pictureBoxRight
 			// 
+			this.pictureBoxRight.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.pictureBoxRight.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRight.Image")));
-			this.pictureBoxRight.Location = new System.Drawing.Point(231, 315);
+			this.pictureBoxRight.Location = new System.Drawing.Point(236, 315);
 			this.pictureBoxRight.Name = "pictureBoxRight";
 			this.pictureBoxRight.Size = new System.Drawing.Size(15, 18);
 			this.pictureBoxRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -328,8 +362,9 @@ namespace FaxCovers
 			// 
 			// pictureBoxLeft
 			// 
+			this.pictureBoxLeft.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.pictureBoxLeft.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLeft.Image")));
-			this.pictureBoxLeft.Location = new System.Drawing.Point(231, 315);
+			this.pictureBoxLeft.Location = new System.Drawing.Point(236, 315);
 			this.pictureBoxLeft.Name = "pictureBoxLeft";
 			this.pictureBoxLeft.Size = new System.Drawing.Size(15, 18);
 			this.pictureBoxLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -376,11 +411,50 @@ namespace FaxCovers
 			this.label13.TabIndex = 31;
 			this.label13.Text = "Standard μήνυμα επικονωνίας";
 			// 
+			// pictureBoxLoadContact
+			// 
+			this.pictureBoxLoadContact.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.pictureBoxLoadContact.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLoadContact.Image")));
+			this.pictureBoxLoadContact.Location = new System.Drawing.Point(79, 86);
+			this.pictureBoxLoadContact.Name = "pictureBoxLoadContact";
+			this.pictureBoxLoadContact.Size = new System.Drawing.Size(16, 16);
+			this.pictureBoxLoadContact.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.pictureBoxLoadContact.TabIndex = 32;
+			this.pictureBoxLoadContact.TabStop = false;
+			this.pictureBoxLoadContact.Click += new System.EventHandler(this.PictureBoxLoadContactClick);
+			// 
+			// pictureBoxSaveContact
+			// 
+			this.pictureBoxSaveContact.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.pictureBoxSaveContact.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSaveContact.Image")));
+			this.pictureBoxSaveContact.Location = new System.Drawing.Point(60, 86);
+			this.pictureBoxSaveContact.Name = "pictureBoxSaveContact";
+			this.pictureBoxSaveContact.Size = new System.Drawing.Size(16, 16);
+			this.pictureBoxSaveContact.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.pictureBoxSaveContact.TabIndex = 33;
+			this.pictureBoxSaveContact.TabStop = false;
+			this.pictureBoxSaveContact.Click += new System.EventHandler(this.PictureBoxSaveContactClick);
+			// 
+			// pictureBoxClear
+			// 
+			this.pictureBoxClear.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.pictureBoxClear.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxClear.Image")));
+			this.pictureBoxClear.Location = new System.Drawing.Point(215, 161);
+			this.pictureBoxClear.Name = "pictureBoxClear";
+			this.pictureBoxClear.Size = new System.Drawing.Size(16, 16);
+			this.pictureBoxClear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.pictureBoxClear.TabIndex = 34;
+			this.pictureBoxClear.TabStop = false;
+			this.pictureBoxClear.Click += new System.EventHandler(this.PictureBoxClearClick);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(254, 346);
+			this.ClientSize = new System.Drawing.Size(483, 346);
+			this.Controls.Add(this.pictureBoxClear);
+			this.Controls.Add(this.pictureBoxSaveContact);
+			this.Controls.Add(this.pictureBoxLoadContact);
 			this.Controls.Add(this.label13);
 			this.Controls.Add(this.webBrowser);
 			this.Controls.Add(this.buttonSave);
@@ -424,9 +498,18 @@ namespace FaxCovers
 			this.menuStripMain.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxRight)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxLeft)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadContact)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaveContact)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClear)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.PictureBox pictureBoxClear;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuItemSparator1;
+		private System.Windows.Forms.ToolStripMenuItem saveContactToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem loadContactToolStripMenuItem;
+		private System.Windows.Forms.PictureBox pictureBoxLoadContact;
+		private System.Windows.Forms.PictureBox pictureBoxSaveContact;
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
