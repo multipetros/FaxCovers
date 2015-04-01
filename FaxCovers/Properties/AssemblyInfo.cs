@@ -10,10 +10,10 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("FaxCovers")]
-[assembly: AssemblyDescription("Εφαρμογή εκτύπωσης συνοδευτικών σελίδων ΦΑΞ")]
+[assembly: AssemblyDescription("Fax cover page printing program")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Petros Kyladitis")]
-[assembly: AssemblyProduct("FaxCovers 1.5")]
+[assembly: AssemblyProduct("FaxCovers")]
 [assembly: AssemblyCopyright("Copyright 2012 Petros Kyladitis")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -28,4 +28,4 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can use the default the Revision and 
 // Build Numbers by using the '*' as shown below:
-[assembly: AssemblyVersion("1.5.*")]
+[assembly: AssemblyVersion("2.0.*")]

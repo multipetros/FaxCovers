@@ -33,26 +33,26 @@
 			this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
 			this.textBoxPages = new System.Windows.Forms.TextBox();
 			this.textBoxToFax = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
+			this.labelDate = new System.Windows.Forms.Label();
+			this.labelPages = new System.Windows.Forms.Label();
+			this.labelToFax = new System.Windows.Forms.Label();
+			this.labelTo = new System.Windows.Forms.Label();
 			this.textBoxTo = new System.Windows.Forms.TextBox();
-			this.label5 = new System.Windows.Forms.Label();
+			this.labelToAddr = new System.Windows.Forms.Label();
 			this.textBoxToAdr = new System.Windows.Forms.TextBox();
 			this.textBoxFromFax = new System.Windows.Forms.TextBox();
-			this.label6 = new System.Windows.Forms.Label();
-			this.label7 = new System.Windows.Forms.Label();
+			this.labelFromFax = new System.Windows.Forms.Label();
+			this.labelFromAddr = new System.Windows.Forms.Label();
 			this.textBoxFromAdr = new System.Windows.Forms.TextBox();
-			this.label8 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
+			this.labelFromTel = new System.Windows.Forms.Label();
+			this.labelFromContact = new System.Windows.Forms.Label();
 			this.textBoxFromTel = new System.Windows.Forms.TextBox();
 			this.textBoxFromContact = new System.Windows.Forms.TextBox();
-			this.label10 = new System.Windows.Forms.Label();
+			this.labelFrom = new System.Windows.Forms.Label();
 			this.textBoxFrom = new System.Windows.Forms.TextBox();
 			this.textBoxMessage = new System.Windows.Forms.TextBox();
-			this.label11 = new System.Windows.Forms.Label();
-			this.label12 = new System.Windows.Forms.Label();
+			this.labelMessage = new System.Windows.Forms.Label();
+			this.labelSeparator = new System.Windows.Forms.Label();
 			this.menuStripMain = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.loadContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,6 +60,9 @@
 			this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItemSparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.greekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.buttonPrint = new System.Windows.Forms.Button();
@@ -68,16 +71,20 @@
 			this.textBoxStdMessage = new System.Windows.Forms.TextBox();
 			this.buttonSave = new System.Windows.Forms.Button();
 			this.webBrowser = new System.Windows.Forms.WebBrowser();
-			this.label13 = new System.Windows.Forms.Label();
+			this.labelStdCommunication = new System.Windows.Forms.Label();
 			this.pictureBoxLoadContact = new System.Windows.Forms.PictureBox();
 			this.pictureBoxSaveContact = new System.Windows.Forms.PictureBox();
 			this.pictureBoxClear = new System.Windows.Forms.PictureBox();
+			this.fontDialog = new System.Windows.Forms.FontDialog();
+			this.buttonSelectFont = new System.Windows.Forms.Button();
+			this.groupBoxFont = new System.Windows.Forms.GroupBox();
 			this.menuStripMain.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxRight)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxLeft)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadContact)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaveContact)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClear)).BeginInit();
+			this.groupBoxFont.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// dateTimePicker
@@ -102,37 +109,41 @@
 			this.textBoxToFax.Size = new System.Drawing.Size(128, 20);
 			this.textBoxToFax.TabIndex = 2;
 			// 
-			// label1
+			// labelDate
 			// 
-			this.label1.Location = new System.Drawing.Point(12, 35);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(83, 23);
-			this.label1.TabIndex = 3;
-			this.label1.Text = "Ημερομηνία";
+			this.labelDate.AutoEllipsis = true;
+			this.labelDate.Location = new System.Drawing.Point(12, 35);
+			this.labelDate.Name = "labelDate";
+			this.labelDate.Size = new System.Drawing.Size(83, 23);
+			this.labelDate.TabIndex = 3;
+			this.labelDate.Text = "Ημερομηνία";
 			// 
-			// label2
+			// labelPages
 			// 
-			this.label2.Location = new System.Drawing.Point(12, 60);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(83, 23);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Αρ. σελίδων";
+			this.labelPages.AutoEllipsis = true;
+			this.labelPages.Location = new System.Drawing.Point(12, 60);
+			this.labelPages.Name = "labelPages";
+			this.labelPages.Size = new System.Drawing.Size(83, 23);
+			this.labelPages.TabIndex = 4;
+			this.labelPages.Text = "Αρ. σελίδων";
 			// 
-			// label3
+			// labelToFax
 			// 
-			this.label3.Location = new System.Drawing.Point(12, 112);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(83, 23);
-			this.label3.TabIndex = 5;
-			this.label3.Text = "Αρ. Φαξ";
+			this.labelToFax.AutoEllipsis = true;
+			this.labelToFax.Location = new System.Drawing.Point(12, 112);
+			this.labelToFax.Name = "labelToFax";
+			this.labelToFax.Size = new System.Drawing.Size(83, 23);
+			this.labelToFax.TabIndex = 5;
+			this.labelToFax.Text = "Αρ. Φαξ";
 			// 
-			// label4
+			// labelTo
 			// 
-			this.label4.Location = new System.Drawing.Point(12, 86);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(42, 23);
-			this.label4.TabIndex = 7;
-			this.label4.Text = "Προς";
+			this.labelTo.AutoEllipsis = true;
+			this.labelTo.Location = new System.Drawing.Point(12, 86);
+			this.labelTo.Name = "labelTo";
+			this.labelTo.Size = new System.Drawing.Size(42, 23);
+			this.labelTo.TabIndex = 7;
+			this.labelTo.Text = "Προς";
 			// 
 			// textBoxTo
 			// 
@@ -141,13 +152,14 @@
 			this.textBoxTo.Size = new System.Drawing.Size(128, 20);
 			this.textBoxTo.TabIndex = 1;
 			// 
-			// label5
+			// labelToAddr
 			// 
-			this.label5.Location = new System.Drawing.Point(12, 138);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(83, 23);
-			this.label5.TabIndex = 8;
-			this.label5.Text = "Διεύθυνση";
+			this.labelToAddr.AutoEllipsis = true;
+			this.labelToAddr.Location = new System.Drawing.Point(12, 138);
+			this.labelToAddr.Name = "labelToAddr";
+			this.labelToAddr.Size = new System.Drawing.Size(83, 23);
+			this.labelToAddr.TabIndex = 8;
+			this.labelToAddr.Text = "Διεύθυνση";
 			// 
 			// textBoxToAdr
 			// 
@@ -163,21 +175,23 @@
 			this.textBoxFromFax.Size = new System.Drawing.Size(128, 20);
 			this.textBoxFromFax.TabIndex = 10;
 			// 
-			// label6
+			// labelFromFax
 			// 
-			this.label6.Location = new System.Drawing.Point(257, 138);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(72, 23);
-			this.label6.TabIndex = 16;
-			this.label6.Text = "Φαξ";
+			this.labelFromFax.AutoEllipsis = true;
+			this.labelFromFax.Location = new System.Drawing.Point(257, 138);
+			this.labelFromFax.Name = "labelFromFax";
+			this.labelFromFax.Size = new System.Drawing.Size(72, 23);
+			this.labelFromFax.TabIndex = 16;
+			this.labelFromFax.Text = "Φαξ";
 			// 
-			// label7
+			// labelFromAddr
 			// 
-			this.label7.Location = new System.Drawing.Point(257, 86);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(72, 23);
-			this.label7.TabIndex = 15;
-			this.label7.Text = "Διεύθυνση";
+			this.labelFromAddr.AutoEllipsis = true;
+			this.labelFromAddr.Location = new System.Drawing.Point(257, 86);
+			this.labelFromAddr.Name = "labelFromAddr";
+			this.labelFromAddr.Size = new System.Drawing.Size(72, 23);
+			this.labelFromAddr.TabIndex = 15;
+			this.labelFromAddr.Text = "Διεύθυνση";
 			// 
 			// textBoxFromAdr
 			// 
@@ -186,21 +200,23 @@
 			this.textBoxFromAdr.Size = new System.Drawing.Size(128, 20);
 			this.textBoxFromAdr.TabIndex = 8;
 			// 
-			// label8
+			// labelFromTel
 			// 
-			this.label8.Location = new System.Drawing.Point(257, 112);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(72, 23);
-			this.label8.TabIndex = 13;
-			this.label8.Text = "Τηλέφνο";
+			this.labelFromTel.AutoEllipsis = true;
+			this.labelFromTel.Location = new System.Drawing.Point(257, 112);
+			this.labelFromTel.Name = "labelFromTel";
+			this.labelFromTel.Size = new System.Drawing.Size(72, 23);
+			this.labelFromTel.TabIndex = 13;
+			this.labelFromTel.Text = "Τηλέφνο";
 			// 
-			// label9
+			// labelFromContact
 			// 
-			this.label9.Location = new System.Drawing.Point(257, 60);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(72, 23);
-			this.label9.TabIndex = 12;
-			this.label9.Text = "Υπεύθυνος";
+			this.labelFromContact.AutoEllipsis = true;
+			this.labelFromContact.Location = new System.Drawing.Point(257, 60);
+			this.labelFromContact.Name = "labelFromContact";
+			this.labelFromContact.Size = new System.Drawing.Size(72, 23);
+			this.labelFromContact.TabIndex = 12;
+			this.labelFromContact.Text = "Υπεύθυνος";
 			// 
 			// textBoxFromTel
 			// 
@@ -216,13 +232,14 @@
 			this.textBoxFromContact.Size = new System.Drawing.Size(128, 20);
 			this.textBoxFromContact.TabIndex = 7;
 			// 
-			// label10
+			// labelFrom
 			// 
-			this.label10.Location = new System.Drawing.Point(257, 34);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(72, 23);
-			this.label10.TabIndex = 19;
-			this.label10.Text = "Από";
+			this.labelFrom.AutoEllipsis = true;
+			this.labelFrom.Location = new System.Drawing.Point(257, 34);
+			this.labelFrom.Name = "labelFrom";
+			this.labelFrom.Size = new System.Drawing.Size(72, 23);
+			this.labelFrom.TabIndex = 19;
+			this.labelFrom.Text = "Από";
 			// 
 			// textBoxFrom
 			// 
@@ -233,33 +250,35 @@
 			// 
 			// textBoxMessage
 			// 
-			this.textBoxMessage.Location = new System.Drawing.Point(12, 192);
+			this.textBoxMessage.Location = new System.Drawing.Point(12, 196);
 			this.textBoxMessage.Multiline = true;
 			this.textBoxMessage.Name = "textBoxMessage";
 			this.textBoxMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.textBoxMessage.Size = new System.Drawing.Size(217, 99);
+			this.textBoxMessage.Size = new System.Drawing.Size(217, 106);
 			this.textBoxMessage.TabIndex = 4;
 			// 
-			// label11
+			// labelMessage
 			// 
-			this.label11.Location = new System.Drawing.Point(12, 171);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(184, 18);
-			this.label11.TabIndex = 21;
-			this.label11.Text = "Συνοδευτικό κείμενο";
+			this.labelMessage.AutoEllipsis = true;
+			this.labelMessage.Location = new System.Drawing.Point(12, 171);
+			this.labelMessage.Name = "labelMessage";
+			this.labelMessage.Size = new System.Drawing.Size(184, 18);
+			this.labelMessage.TabIndex = 21;
+			this.labelMessage.Text = "Συνοδευτικό κείμενο";
 			// 
-			// label12
+			// labelSeparator
 			// 
-			this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label12.Location = new System.Drawing.Point(242, 34);
-			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(2, 280);
-			this.label12.TabIndex = 22;
+			this.labelSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.labelSeparator.Location = new System.Drawing.Point(242, 34);
+			this.labelSeparator.Name = "labelSeparator";
+			this.labelSeparator.Size = new System.Drawing.Size(2, 301);
+			this.labelSeparator.TabIndex = 22;
 			// 
 			// menuStripMain
 			// 
 			this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.fileToolStripMenuItem,
+									this.languageToolStripMenuItem,
 									this.helpToolStripMenuItem});
 			this.menuStripMain.Location = new System.Drawing.Point(0, 0);
 			this.menuStripMain.Name = "menuStripMain";
@@ -319,6 +338,31 @@
 			this.exitToolStripMenuItem.Text = "Έ&ξοδος";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
 			// 
+			// languageToolStripMenuItem
+			// 
+			this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+									this.englishToolStripMenuItem,
+									this.greekToolStripMenuItem});
+			this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+			this.languageToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+			this.languageToolStripMenuItem.Text = "&Γλώσσα";
+			// 
+			// englishToolStripMenuItem
+			// 
+			this.englishToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("englishToolStripMenuItem.Image")));
+			this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+			this.englishToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.englishToolStripMenuItem.Text = "E&nglish";
+			this.englishToolStripMenuItem.Click += new System.EventHandler(this.EnglishToolStripMenuItemClick);
+			// 
+			// greekToolStripMenuItem
+			// 
+			this.greekToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("greekToolStripMenuItem.Image")));
+			this.greekToolStripMenuItem.Name = "greekToolStripMenuItem";
+			this.greekToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.greekToolStripMenuItem.Text = "Ε&λληνικά";
+			this.greekToolStripMenuItem.Click += new System.EventHandler(this.GreekToolStripMenuItemClick);
+			// 
 			// helpToolStripMenuItem
 			// 
 			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -338,9 +382,10 @@
 			// 
 			// buttonPrint
 			// 
+			this.buttonPrint.AutoEllipsis = true;
 			this.buttonPrint.Image = ((System.Drawing.Image)(resources.GetObject("buttonPrint.Image")));
 			this.buttonPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.buttonPrint.Location = new System.Drawing.Point(51, 300);
+			this.buttonPrint.Location = new System.Drawing.Point(44, 313);
 			this.buttonPrint.Name = "buttonPrint";
 			this.buttonPrint.Size = new System.Drawing.Size(134, 34);
 			this.buttonPrint.TabIndex = 5;
@@ -352,7 +397,7 @@
 			// 
 			this.pictureBoxRight.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.pictureBoxRight.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRight.Image")));
-			this.pictureBoxRight.Location = new System.Drawing.Point(236, 315);
+			this.pictureBoxRight.Location = new System.Drawing.Point(236, 336);
 			this.pictureBoxRight.Name = "pictureBoxRight";
 			this.pictureBoxRight.Size = new System.Drawing.Size(15, 18);
 			this.pictureBoxRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -364,7 +409,7 @@
 			// 
 			this.pictureBoxLeft.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.pictureBoxLeft.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLeft.Image")));
-			this.pictureBoxLeft.Location = new System.Drawing.Point(236, 315);
+			this.pictureBoxLeft.Location = new System.Drawing.Point(236, 336);
 			this.pictureBoxLeft.Name = "pictureBoxLeft";
 			this.pictureBoxLeft.Size = new System.Drawing.Size(15, 18);
 			this.pictureBoxLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -378,11 +423,13 @@
 			this.textBoxStdMessage.Location = new System.Drawing.Point(257, 196);
 			this.textBoxStdMessage.Multiline = true;
 			this.textBoxStdMessage.Name = "textBoxStdMessage";
+			this.textBoxStdMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
 			this.textBoxStdMessage.Size = new System.Drawing.Size(206, 66);
 			this.textBoxStdMessage.TabIndex = 11;
 			// 
 			// buttonSave
 			// 
+			this.buttonSave.AutoEllipsis = true;
 			this.buttonSave.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave.Image")));
 			this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.buttonSave.Location = new System.Drawing.Point(355, 268);
@@ -403,13 +450,14 @@
 			this.webBrowser.Visible = false;
 			this.webBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.WebBrowserDocumentCompleted);
 			// 
-			// label13
+			// labelStdCommunication
 			// 
-			this.label13.Location = new System.Drawing.Point(257, 171);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(206, 23);
-			this.label13.TabIndex = 31;
-			this.label13.Text = "Standard μήνυμα επικονωνίας";
+			this.labelStdCommunication.AutoEllipsis = true;
+			this.labelStdCommunication.Location = new System.Drawing.Point(257, 171);
+			this.labelStdCommunication.Name = "labelStdCommunication";
+			this.labelStdCommunication.Size = new System.Drawing.Size(206, 23);
+			this.labelStdCommunication.TabIndex = 31;
+			this.labelStdCommunication.Text = "Standard μήνυμα επικονωνίας";
 			// 
 			// pictureBoxLoadContact
 			// 
@@ -447,41 +495,67 @@
 			this.pictureBoxClear.TabStop = false;
 			this.pictureBoxClear.Click += new System.EventHandler(this.PictureBoxClearClick);
 			// 
+			// fontDialog
+			// 
+			this.fontDialog.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+			this.fontDialog.ShowEffects = false;
+			// 
+			// buttonSelectFont
+			// 
+			this.buttonSelectFont.AutoEllipsis = true;
+			this.buttonSelectFont.Location = new System.Drawing.Point(9, 19);
+			this.buttonSelectFont.Name = "buttonSelectFont";
+			this.buttonSelectFont.Size = new System.Drawing.Size(191, 23);
+			this.buttonSelectFont.TabIndex = 37;
+			this.buttonSelectFont.UseVisualStyleBackColor = true;
+			this.buttonSelectFont.Click += new System.EventHandler(this.ButtonSelectFontClick);
+			// 
+			// groupBoxFont
+			// 
+			this.groupBoxFont.Controls.Add(this.buttonSelectFont);
+			this.groupBoxFont.Location = new System.Drawing.Point(257, 304);
+			this.groupBoxFont.Name = "groupBoxFont";
+			this.groupBoxFont.Size = new System.Drawing.Size(206, 50);
+			this.groupBoxFont.TabIndex = 38;
+			this.groupBoxFont.TabStop = false;
+			this.groupBoxFont.Text = "Γραμματοσειρά";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(483, 346);
+			this.ClientSize = new System.Drawing.Size(483, 366);
+			this.Controls.Add(this.groupBoxFont);
 			this.Controls.Add(this.pictureBoxClear);
 			this.Controls.Add(this.pictureBoxSaveContact);
 			this.Controls.Add(this.pictureBoxLoadContact);
-			this.Controls.Add(this.label13);
+			this.Controls.Add(this.labelStdCommunication);
 			this.Controls.Add(this.webBrowser);
 			this.Controls.Add(this.buttonSave);
 			this.Controls.Add(this.textBoxStdMessage);
-			this.Controls.Add(this.label12);
+			this.Controls.Add(this.labelSeparator);
 			this.Controls.Add(this.pictureBoxLeft);
 			this.Controls.Add(this.pictureBoxRight);
 			this.Controls.Add(this.buttonPrint);
-			this.Controls.Add(this.label11);
+			this.Controls.Add(this.labelMessage);
 			this.Controls.Add(this.textBoxMessage);
-			this.Controls.Add(this.label10);
+			this.Controls.Add(this.labelFrom);
 			this.Controls.Add(this.textBoxFrom);
 			this.Controls.Add(this.textBoxFromFax);
-			this.Controls.Add(this.label6);
-			this.Controls.Add(this.label7);
+			this.Controls.Add(this.labelFromFax);
+			this.Controls.Add(this.labelFromAddr);
 			this.Controls.Add(this.textBoxFromAdr);
-			this.Controls.Add(this.label8);
-			this.Controls.Add(this.label9);
+			this.Controls.Add(this.labelFromTel);
+			this.Controls.Add(this.labelFromContact);
 			this.Controls.Add(this.textBoxFromTel);
 			this.Controls.Add(this.textBoxFromContact);
 			this.Controls.Add(this.textBoxToAdr);
-			this.Controls.Add(this.label5);
-			this.Controls.Add(this.label4);
+			this.Controls.Add(this.labelToAddr);
+			this.Controls.Add(this.labelTo);
 			this.Controls.Add(this.textBoxTo);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.labelToFax);
+			this.Controls.Add(this.labelPages);
+			this.Controls.Add(this.labelDate);
 			this.Controls.Add(this.textBoxToFax);
 			this.Controls.Add(this.textBoxPages);
 			this.Controls.Add(this.dateTimePicker);
@@ -501,16 +575,35 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoadContact)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaveContact)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClear)).EndInit();
+			this.groupBoxFont.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label labelSeparator;
+		private System.Windows.Forms.ToolStripMenuItem greekToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
+		private System.Windows.Forms.Label labelFromAddr;
+		private System.Windows.Forms.Label labelToFax;
+		private System.Windows.Forms.Label labelTo;
+		private System.Windows.Forms.Label labelToAddr;
+		private System.Windows.Forms.Label labelFromTel;
+		private System.Windows.Forms.Label labelFromContact;
+		private System.Windows.Forms.Label labelMessage;
+		private System.Windows.Forms.Label labelStdCommunication;
+		private System.Windows.Forms.Label labelDate;
+		private System.Windows.Forms.Label labelPages;
+		private System.Windows.Forms.Label labelFromFax;
+		private System.Windows.Forms.Label labelFrom;
+		private System.Windows.Forms.FontDialog fontDialog;
+		private System.Windows.Forms.GroupBox groupBoxFont;
+		private System.Windows.Forms.Button buttonSelectFont;
 		private System.Windows.Forms.PictureBox pictureBoxClear;
 		private System.Windows.Forms.ToolStripSeparator toolStripMenuItemSparator1;
 		private System.Windows.Forms.ToolStripMenuItem saveContactToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem loadContactToolStripMenuItem;
 		private System.Windows.Forms.PictureBox pictureBoxLoadContact;
 		private System.Windows.Forms.PictureBox pictureBoxSaveContact;
-		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
@@ -523,26 +616,14 @@
 		private System.Windows.Forms.PictureBox pictureBoxRight;
 		private System.Windows.Forms.Button buttonPrint;
 		private System.Windows.Forms.MenuStrip menuStripMain;
-		private System.Windows.Forms.Label label12;
-		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.TextBox textBoxMessage;
 		private System.Windows.Forms.TextBox textBoxFrom;
-		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.TextBox textBoxFromContact;
 		private System.Windows.Forms.TextBox textBoxFromTel;
-		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.TextBox textBoxFromAdr;
-		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.TextBox textBoxFromFax;
 		private System.Windows.Forms.TextBox textBoxToAdr;
-		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.TextBox textBoxTo;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox textBoxToFax;
 		private System.Windows.Forms.TextBox textBoxPages;
 		private System.Windows.Forms.DateTimePicker dateTimePicker;

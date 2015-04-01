@@ -1,4 +1,22 @@
-﻿using System;
+﻿/*
+ * FaxCovers - Copyright (C) 2012 Petros Kyladitis
+ * A Fax cover page printing program
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+ 
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic ;
@@ -13,14 +31,12 @@ namespace FaxCovers{
 	public partial class ContactsForm : Form{
 		public ContactsForm(){
 			InitializeComponent();
-			ToolTip toolTip = new ToolTip() ;
-			toolTip.SetToolTip(listBoxContacts, "Επιλέξετε την επαφή που θέλετε και κάντε διπλό κλικ σε αυτήν\nγια κλείσει αυτό το παράθυρο και να φορτωθεί στην εφαρμογή") ;
-			toolTip.SetToolTip(buttonLoad, "Φόρτωση των στοιχείων της επιλεγμένης επαφής\nστην εφαρμογή και κλείσιμο αυτού του παραθύρου") ;
-			toolTip.SetToolTip(buttonDelete, "Διαγραφή της επιλεγμένης επαφής από τη λίστα\nΠροσοχή! Η ενέργεια αυτή δεν μπορεί να αναιρεθεί") ;		
+			LoadUIStrings() ;
 		}
 		
 		bool contactsDeleted = false ;
-		
+		ToolTip tip = new ToolTip() ;
+			
 		void LoadContactAndClose(){
 			string selectedContact = (string) listBoxContacts.SelectedItem ;
 			if(selectedContact != null){
@@ -64,6 +80,22 @@ namespace FaxCovers{
 		
 		void ListBoxContactsDoubleClick(object sender, EventArgs e){
 			LoadContactAndClose() ;
+		}
+		
+		private void LoadUIStrings(){
+			Props ini = new Props(MainForm.INI_NAME, false) ;
+			string langFile = ini.GetProperty(MainForm.INI_PARAM_LANG_FILE) ;
+			if(langFile == null)
+				return ;
+			
+			Props lang = new Props(langFile, false) ;
+			buttonDelete.Text = lang.GetProperty("CONTACTS_DELETE", true) ;
+			buttonLoad.Text = lang.GetProperty("CONTACTS_LOAD", true) ;
+			this.Text = lang.GetProperty("CONTACTS_TITLE", true) ;
+			
+			tip.SetToolTip(listBoxContacts, lang.GetProperty("CONTACTS_TIP", true)) ;
+			tip.SetToolTip(buttonLoad, lang.GetProperty("CONTACTS_LOAD_TIP", true)) ;
+			tip.SetToolTip(buttonDelete, lang.GetProperty("CONTACTS_DELETE_TIP", true)) ;
 		}
 	}
 }

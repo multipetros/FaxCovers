@@ -39,15 +39,16 @@
 			this.listBoxContacts.HorizontalScrollbar = true;
 			this.listBoxContacts.Location = new System.Drawing.Point(12, 12);
 			this.listBoxContacts.Name = "listBoxContacts";
-			this.listBoxContacts.Size = new System.Drawing.Size(182, 186);
+			this.listBoxContacts.Size = new System.Drawing.Size(221, 186);
 			this.listBoxContacts.TabIndex = 0;
 			this.listBoxContacts.DoubleClick += new System.EventHandler(this.ListBoxContactsDoubleClick);
 			// 
 			// buttonLoad
 			// 
-			this.buttonLoad.Location = new System.Drawing.Point(77, 204);
+			this.buttonLoad.AutoEllipsis = true;
+			this.buttonLoad.Location = new System.Drawing.Point(88, 204);
 			this.buttonLoad.Name = "buttonLoad";
-			this.buttonLoad.Size = new System.Drawing.Size(117, 23);
+			this.buttonLoad.Size = new System.Drawing.Size(145, 23);
 			this.buttonLoad.TabIndex = 1;
 			this.buttonLoad.Text = "Φόρτωση";
 			this.buttonLoad.UseVisualStyleBackColor = true;
@@ -55,9 +56,10 @@
 			// 
 			// buttonDelete
 			// 
+			this.buttonDelete.AutoEllipsis = true;
 			this.buttonDelete.Location = new System.Drawing.Point(12, 204);
 			this.buttonDelete.Name = "buttonDelete";
-			this.buttonDelete.Size = new System.Drawing.Size(59, 23);
+			this.buttonDelete.Size = new System.Drawing.Size(70, 23);
 			this.buttonDelete.TabIndex = 2;
 			this.buttonDelete.Text = "Διαγρφή";
 			this.buttonDelete.UseVisualStyleBackColor = true;
@@ -68,7 +70,7 @@
 			this.AcceptButton = this.buttonLoad;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(206, 233);
+			this.ClientSize = new System.Drawing.Size(245, 233);
 			this.Controls.Add(this.buttonDelete);
 			this.Controls.Add(this.buttonLoad);
 			this.Controls.Add(this.listBoxContacts);
